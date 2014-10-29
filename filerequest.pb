@@ -1,0 +1,14 @@
+
+
+message FileRequest {
+	required string filename = 1;
+	optional string contents = 2;
+
+	enum RequestType {
+		READ = 0;
+		WRITE = 1;
+		APPEND = 2;
+		DELETE = 3;
+	}
+	required RequestType request_type = 3;
+}
